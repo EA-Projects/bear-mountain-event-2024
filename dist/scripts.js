@@ -12,29 +12,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   );
 });
 
-////// DOCUMENT LOAD
-$(window).on('load', function () {
-  wow = new WOW({
-    boxClass: 'animate',
-    animateClass: 'animated',
-    offset: 200,
-    mobile: true,
-  });
-  wow.init();
-});
-
-////// DISABLE ANIMATIONS ON MOBILE
-if (
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  ) ||
-  $(window).width() < 575
-) {
-  $('.animate').removeClass('animate'); // to remove transition
-}
-
-/////// FORM
-
 $(document).ready(function () {
   var options_contact = {
     dataType: 'script',
@@ -53,27 +30,35 @@ $(document).ready(function () {
       scale: 1.02,
       duration: 1.5,
     })
-    .from("#hero .box-title",{
+    .fromTo("#hero .box-title",{
       opacity: 0,
       y: 50,
       duration: 1,
+    },{
+      opacity: 1,
+      y: 0,
     }, "-=1")
-    .from("#hero .event-data",{
+    .fromTo("#hero .event-data",{
       opacity: 0,
       y: 50,
       duration: .5,
+    },{
+      opacity: 1,
+      y: 0,
+    }, "-=.8")
+    .fromTo("#hero .box-buttons",{
+      opacity: 0,
+      y: 50,
+      duration: .5,
+    },{
+      opacity: 1,
+      y: 0,
     }, "-=.5")
-    .from("#hero .box-buttons",{
-      opacity: 0,
-      y: 50,
-      duration: .5,
-    }, "-=.3")
     .from("header",{
       opacity: 0,
       y: -50,
       duration: .5,
-      stagger: .2,
-    }, "-=.2")
+    }, "-=.4")
 
     let heroScrollAnimation = gsap.timeline({
       scrollTrigger: {
@@ -165,6 +150,7 @@ $(document).ready(function () {
   // END WINDOW READY
 });
 
+/////// FORM
 $(function () {
   const scriptURL =
     'https://script.google.com/macros/s/AKfycbxRDInFTAMe4nn_9cHHnfbdToMsoEPpRpS5z8cMOne7S385ikUET5MbRIfUK83voo2UVg/exec';
