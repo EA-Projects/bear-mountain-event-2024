@@ -86,7 +86,7 @@ $(document).ready(function () {
       }
     });
 
-    aboutAnimation.fromTo('#about h3, #about hr, #about p, #about h4', {
+    aboutAnimation.fromTo('#about h3, #about hr, #about p, #about .detail-box, #about h4', {
       y: '80px',
       opacity: 0,
     },{
@@ -108,17 +108,18 @@ $(document).ready(function () {
     });
     speakersAnimation
     .from("#speakers .speakers-box:not(.more-speakers)",{
-      x: 140,
+      xPercent: 55,
+      stagger: 0.1,
     })
     .from("#speakers .speakers-box.more-speakers",{
       opacity: 0,
-      scale: .95,
+      scale: .90,
     })
 
-    // APPLY SECTION 
-    let applyAnimation = gsap.timeline({
+    // ABOUT WORKBENCH SECTION 
+    let aboutWorkbenchAnimation = gsap.timeline({
       scrollTrigger: {
-        trigger: '#apply',
+        trigger: '#about-workbench',
         start: '-10% 50%',
         end: '30% 50%',
         scrub: 3,
@@ -126,19 +127,19 @@ $(document).ready(function () {
         // markers: true,
       }
     });
-    applyAnimation
-    .from("#apply",{
+    aboutWorkbenchAnimation
+    .from("#about-workbench",{
       opacity: 0,
       scale: 1.02,
       duration: 1.5,
     })
-    .from("#apply h2, #apply hr, #apply p",{
+    .from("#about-workbench h2, #about-workbench hr",{
       opacity: 0,
       y: 50,
       stagger: .2,
       duration: 1,
     })
-    .from("#apply .form-box",{
+    .from("#about-workbench .about-box",{
       opacity: 0,
       scale: .95,
       y: 50,
@@ -147,35 +148,3 @@ $(document).ready(function () {
   });
   // END WINDOW READY
 });
-
-/////// FORM
-$(function () {
-  const scriptURL =
-    'https://script.google.com/macros/s/AKfycbxRDInFTAMe4nn_9cHHnfbdToMsoEPpRpS5z8cMOne7S385ikUET5MbRIfUK83voo2UVg/exec';
-    
-  const form = document.getElementById('register-form');
-  form.addEventListener('submit', (e) => {
-    $('#register-form').addClass('disabled');
-    e.preventDefault();
-
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => {
-          $('#register-form').addClass("success");
-          $('#success-message').addClass("success");
-      })
-      .catch((error) => {
-        console.error('Error!', error.message);
-        $('#register-form button, #register-form input').removeAttr('readonly');
-      });
-  });
-});
-
-var today = new Date();
-var myDate = 'Date: ' + today.getMonth() + 1 + '/' + today.getDate() + '/' + today.getFullYear();
-var hour = 'Time: ' + today.getHours() + ':' + today.getMinutes();
-
-var dateWithHour = myDate + ' ' + hour;
-
-window.onload = function () {
-  document.getElementById('datetime').value = dateWithHour;
-};
