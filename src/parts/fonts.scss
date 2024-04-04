@@ -1,43 +1,43 @@
 @font-face {
-  font-family: 'Avenir';
-  src: url('/dist/fonts/Avenir-Heavy.eot');
-  src: url('/dist/fonts/Avenir-Heavy.woff2') format('woff2'),
-    url('/dist/fonts/Avenir-Heavy.woff') format('woff'),
-    url('/dist/fonts/Avenir-Heavy.ttf') format('truetype'),
-    url('/dist/fonts/Avenir-Heavy.svg') format('svg');
+  font-family: 'DMSans';
+  src: url('/dist/fonts/DMSans-Bold.eot');
+  src: url('/dist/fonts/DMSans-Bold.woff2') format('woff2'),
+    url('/dist/fonts/DMSans-Bold.woff') format('woff'),
+    url('/dist/fonts/DMSans-Bold.ttf') format('truetype'),
+    url('/dist/fonts/DMSans-Bold.svg') format('svg');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src: url('/dist/fonts/Avenir-Medium.eot');
-  src: url('/dist/fonts/Avenir-Medium.woff2') format('woff2'),
-    url('/dist/fonts/Avenir-Medium.woff') format('woff'),
-    url('/dist/fonts/Avenir-Medium.ttf') format('truetype'),
-    url('/dist/fonts/Avenir-Medium.svg') format('svg');
+  font-family: 'DMSans';
+  src: url('/dist/fonts/DMSans-Regular.eot');
+  src: url('/dist/fonts/DMSans-Regular.woff2') format('woff2'),
+    url('/dist/fonts/DMSans-Regular.woff') format('woff'),
+    url('/dist/fonts/DMSans-Regular.ttf') format('truetype'),
+    url('/dist/fonts/DMSans-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src: url('/dist/fonts/Avenir-Light.eot');
-  src: url('/dist/fonts/Avenir-Light.woff2') format('woff2'),
-    url('/dist/fonts/Avenir-Light.woff') format('woff'),
-    url('/dist/fonts/Avenir-Light.ttf') format('truetype'),
-    url('/dist/fonts/Avenir-Light.svg') format('svg');
+  font-family: 'DMSans';
+  src: url('/dist/fonts/DMSans-Light.eot');
+  src: url('/dist/fonts/DMSans-Light.woff2') format('woff2'),
+    url('/dist/fonts/DMSans-Light.woff') format('woff'),
+    url('/dist/fonts/DMSans-Light.ttf') format('truetype'),
+    url('/dist/fonts/DMSans-Light.svg') format('svg');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src: url('/dist/fonts/AvenirNext-UltraLight.eot');
-  src: url('/dist/fonts/AvenirNext-UltraLight.woff2') format('woff2'),
-    url('/dist/fonts/AvenirNext-UltraLight.woff') format('woff'),
-    url('/dist/fonts/AvenirNext-UltraLight.ttf') format('truetype'),
-    url('/dist/fonts/AvenirNext-UltraLight.svg') format('svg');
+  font-family: 'DMSans';
+  src: url('/dist/fonts/DMSans-ExtraLight.eot');
+  src: url('/dist/fonts/DMSans-ExtraLight.woff2') format('woff2'),
+    url('/dist/fonts/DMSans-ExtraLight.woff') format('woff'),
+    url('/dist/fonts/DMSans-ExtraLight.ttf') format('truetype'),
+    url('/dist/fonts/DMSans-ExtraLight.svg') format('svg');
   font-weight: 100;
   font-style: normal;
 }
@@ -48,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Avenir', Arial, sans-serif;
+  font-family: 'DMSans', Arial, sans-serif;
   color: #fff;
   line-height: 1.1em;
   text-align: center;
