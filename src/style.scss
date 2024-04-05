@@ -276,7 +276,7 @@ header {
 }
 
 #speakers {
-  padding: 100px 0;
+  padding: 100px 0 60px;
   background: linear-gradient(180deg, #FCEFDB 0%, #FFFCF7 0.01%, #FCEFDB 100%);
   position: relative;
   z-index: 9;
@@ -285,6 +285,7 @@ header {
   }
   .speakers-box {
     text-align: center;
+    margin-bottom: 70px;
     .profile {
       transition: all .4s ease-in-out;
       img {
@@ -307,7 +308,9 @@ header {
         text-align: center;
         letter-spacing: 0.21em;
         text-transform: uppercase;
-        max-width: 150px;
+        max-width: 200px;
+        min-height: 40px;
+        margin-bottom: 12px;
         &.width {
           max-width: 250px;
         }
@@ -318,7 +321,28 @@ header {
             max-width: 120px;
           }
           &.datadog{
-            max-width: 147px;
+            max-width: 130px;
+          }
+          &.clay{
+            max-width: 60px;
+          }
+          &.databricks{
+            max-width: 150px;
+          }
+          &.pinecone{
+            max-width: 130px;
+          }
+          &.apollo-graphql{
+            max-width: 120px;
+          }
+          &.linear{
+            max-width: 110px;
+          }
+          &.epsagon{
+            max-width: 70px;
+          }
+          &.big-id{
+            max-width: 90px;
           }
         }
       }
@@ -429,7 +453,7 @@ header {
   }
   @media (max-width: 991px) {
     .speakers-box {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
   @media (max-width: 575px) {

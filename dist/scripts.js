@@ -109,14 +109,16 @@ $(document).ready(function () {
       }
     });
     speakersAnimation
-    .from("#speakers .speakers-box:not(.more-speakers)",{
-      xPercent: 55,
+    .from("#speakers h2, #speakers hr",{
+      opacity: 0,
+      y: 50,
       stagger: 0.1,
     })
-    .from("#speakers .speakers-box.more-speakers",{
+    .from("#speakers .speakers-box",{
       opacity: 0,
-      scale: .90,
-    })
+      y: 50,
+      stagger: 0.1,
+    });
 
     // ABOUT WORKBENCH SECTION 
     let aboutWorkbenchAnimation = gsap.timeline({
