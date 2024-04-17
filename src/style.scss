@@ -353,6 +353,9 @@ header {
           &.merge{
             max-width: 110px;
           }
+          &.hugging{
+            max-width: 150px;
+          }
         }
       }
     }
