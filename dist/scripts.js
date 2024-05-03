@@ -54,11 +54,19 @@ $(document).ready(function () {
       opacity: 1,
       y: 0,
     }, "-=.5")
+    .fromTo("#hero .disclaimer",{
+      opacity: 0,
+      y: 50,
+      duration: .5,
+    },{
+      opacity: 1,
+      y: 0,
+    }, "-=.3")
     .from("header",{
       opacity: 0,
       y: -50,
       duration: .5,
-    }, "-=.4")
+    }, "-=.2")
 
     let heroScrollAnimation = gsap.timeline({
       scrollTrigger: {

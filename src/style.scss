@@ -205,6 +205,18 @@ header {
         padding: 17px 25px 13px;
       }
     }
+    p {
+      &.disclaimer {
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        margin: 15px auto 0px;
+        letter-spacing: 0.18em;
+      }
+    }
   }
   @media (max-width: 991px){
     .content-hero{
@@ -355,6 +367,9 @@ header {
           }
           &.hugging{
             max-width: 150px;
+          }
+          &.authzed{
+            max-width: 135px;
           }
         }
       }
