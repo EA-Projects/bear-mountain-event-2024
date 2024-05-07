@@ -332,6 +332,11 @@ header {
           &.bettercloud{
             max-width: 120px;
           }
+          &.grafana{
+            max-width: 148px;
+            position: relative;
+            top: 6px;
+          }
           &.datadog{
             max-width: 130px;
           }
@@ -370,6 +375,11 @@ header {
           }
           &.authzed{
             max-width: 135px;
+          }
+          &.courier{
+            max-width: 200px;
+            position: relative;
+            top: 8px;
           }
         }
       }
