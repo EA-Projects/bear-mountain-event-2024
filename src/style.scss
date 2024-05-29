@@ -385,6 +385,17 @@ header {
             position: relative;
             top: 8px;
           }
+          &.assembly-ai{
+            max-width: 160px;
+            position: relative;
+            top: 8px;
+          }
+          &.nike{
+            max-width: 69px;
+          }
+          &.dataiku{
+            max-width: 95px;
+          }
         }
       }
     }
@@ -522,11 +533,12 @@ header {
     border-radius: 6px;
     position: relative;
     background-color: $cream;
+    height: 100%;
     transition: all .4s ease-in-out;
     &.left {
       &:before {
         top: 55px;
-        height: 85%;
+        height: 88%;
         background: linear-gradient(180deg, #2B366D 73.16%, rgba(43, 54, 109, 0) 100%);
         opacity: 30%;
       }
@@ -636,12 +648,48 @@ header {
         }
       }
       ul {
-        padding-left: 25px;
+        padding-left: 23px;
+        list-style: none;
         li {
-          font-size: 16px;
-          line-height: 22px;
-          font-weight: 300;
+          font-size: 14px;
+          line-height: 18px;
           margin-bottom: 5px;
+          position: relative;
+          color: #033058;
+          &::before{
+            content: "";
+            width: 15px;
+            height: 3px;
+            background-color: #06B2D0;
+            position: absolute;
+            left: -20px;
+            top: 7px;
+          }
+          strong{
+            font-weight: 400;
+          }
+          ul{
+            list-style: none;
+            margin-top: 3px;
+            margin-bottom: 10px;
+            padding-left: 0;
+            li{
+              font-size: 13px;
+              color: #6A859E;
+              font-style: italic;
+              margin-bottom: 0;
+              &::before{
+                display: none;
+              }
+              a{
+                color: #B18B06;
+                text-decoration: underline;
+                &:hover{
+                  color: $dark-blue;
+                }
+              }
+            }
+          }
           span {
             font-weight: 500;
             text-decoration: underline;
@@ -650,8 +698,14 @@ header {
       }
     }
     @media (max-width: 575px) {
+      padding: 25px 20px 10px;
+      &.right{
+        padding-top: 0;
+      }
       .description{
         p{
+          font-size: 14px;
+          line-height: 20px;
           &.disclaimer{
             position: static;
           }
@@ -659,7 +713,6 @@ header {
       }
     }
     @media (max-width: 425px) {
-      padding: 30px;
       .hour {
         &:before {
           display: none;
