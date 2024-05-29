@@ -535,12 +535,18 @@ header {
     background-color: $cream;
     height: 100%;
     transition: all .4s ease-in-out;
-    &.left {
+    &.left,
+    &.right {
       &:before {
         top: 55px;
-        height: 88%;
+        height: 95%;
         background: linear-gradient(180deg, #2B366D 73.16%, rgba(43, 54, 109, 0) 100%);
         opacity: 30%;
+      }
+    }
+    &.right {
+      &:before {
+        height: 85%;
       }
     }
     &:before {
